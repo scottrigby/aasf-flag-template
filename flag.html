@@ -37,16 +37,9 @@
     Credits: Template originally from an IA file sent by Pioneer works, but re-made with Figma, and and exported as SVG,
     then modified/simplified manually (Figma is a lovely tool but exports unnecessary cruft).
     See @link https://www.figma.com/file/QCKHtN7X1JQWWRRM35sfGX/AASF-Flag-Template-Flat my Figma doc.-->
-<div class="svg"></div>
+<div id="svg"></div>
 <script>
-    var ajax = new XMLHttpRequest();
-    ajax.open("GET", "template.svg", true);
-    ajax.send();
-    ajax.onload = function(e) {
-        var div = document.createElement("div");
-        div.innerHTML = ajax.responseText;
-        document.body.insertBefore(div, document.body.childNodes[0]);
-    }
+    $('#svg').load('template.svg');
 </script>
 
 </body>
